@@ -1,0 +1,59 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+   int A,B;
+   char c;
+   
+   printf("Enter an operator(+ , -, *, / , %%) :");
+   scanf("%c", &c);
+   printf("Enter two numbers: ");
+   scanf("%d%d",&A,&B);
+       
+   switch(c)
+   {
+       case '+':
+       printf("Sum = %d\n ",A + B);
+       break;
+       
+       case '-':
+       printf("Subtract =%d\n ",A - B);
+       break;
+       
+       case '*':
+       printf("multiply =%d\n ", A * B);
+       break;
+       
+       case '/':
+       if(B!=0)
+       printf("division = %d\n", A / B);
+       else
+       printf("Division is not possible");
+       break;
+       
+      case '%':
+      printf("mode = %d\n", A % B);
+      break;
+
+
+      default:
+      printf("Invalid input");
+   }
+   
+   
+
+    return 0;
+
+}
+
+
