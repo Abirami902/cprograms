@@ -1,0 +1,30 @@
+
+#include <stdio.h>
+
+void main()
+{
+    int n,rem,p1,p2,temp;
+    
+    printf("All Armstrong numbers between 1 & 1000");
+    for(n=1;n<=1000;n++)
+    {
+           if(n<=9)
+         {
+             printf("%d ",n);
+         }
+         else
+         {
+           rem=n%10;
+           p1 = (n % 100 - rem) / 10;  
+           p2 = (n % 1000 - p1) /100;
+           temp = (rem * rem * rem) + (p1 * p1 * p1) + (p2 * p2 * p2); 
+    
+        	if (temp == n)
+            {
+                printf("%d ", temp);
+            }
+            
+         }
+   }        
+       
+}
