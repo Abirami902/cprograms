@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    char ch[] = "computer science";
+    int i = 0, count = 0;
+
+    while (ch[i] != '\0') {
+        if (ch[i] == 'a' || ch[i] == 'e' || ch[i] == 'i' || ch[i] == 'o' || ch[i] == 'u')
+        {
+            count++;
+        }
+        i++;
+    }
+
+    printf("Number of vowels: %d\n", count);
+
+    return 0;
+}
+
