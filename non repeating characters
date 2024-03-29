@@ -1,0 +1,24 @@
+#include<stdio.h> 
+int main()
+{
+    char str[100];
+    int i;
+    int count[256] = {0};
+    
+    printf("Enter a string which repeats same letters :\n");
+    scanf("%s",str);
+    
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        count[str[i]]++;
+    }
+ printf("The non repeating characters are: ");
+  for(i = 0; i < 256; i++)
+  {
+    if(count[i] == 1)
+     {
+      printf(" %c ", i);
+     }
+  }
+  return 0;
+ }
