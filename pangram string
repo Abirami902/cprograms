@@ -1,0 +1,50 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+#include <stdbool.h> //boolean data type t/f
+#include <ctype.h> //character handling
+
+#define n 26 //26 alphabets in n
+
+int main() {
+    
+    char str[] = "The quick brown fox jumps over the lazy dog";
+
+    int Lc[n] = {0}; //letter count= occurence of each letter
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        
+        char c = tolower(str[i]);
+
+        if (c >= 'a' && c <= 'z') {
+            
+            Lc[c - 'a']++;
+        }
+    }
+
+
+    bool isPangram = true; // check is there any letter missing
+    for (int i = 0; i < n; i++) {
+        if (Lc[i] == 0) {
+            isPangram = false; 
+            break;
+        }
+    }
+
+    if (isPangram) 
+    {
+        printf("The string is  pangram\n");
+    } 
+    else
+    {
+        printf("The string is not  pangram\n");
+    }
+
+    return 0;
+}
