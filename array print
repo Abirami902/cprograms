@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+    int array[25][25],i,j,n1,n2;
+    
+    printf("Enter number of elements for row :");
+    scanf("%d",&n1);
+    
+     printf("Enter the number of elements for column :");
+    scanf("%d",&n2);
+    
+    printf("Enter the elements [%d],[%d] :",n1,n2);
+    for(i=0;i<n1;i++)
+    for(j=0;j<n2;j++)
+    
+    scanf("%d",&array[i][j]);
+    
+    printf("Two Dimensional array elements:\n");
+   for(i=0; i<n1; i++) {
+      for(j=0;j<n2;j++) {
+         printf("%d ", array[i][j]);
+       
+      }
+   }
+    
+
+    return 0;
+}
