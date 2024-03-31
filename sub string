@@ -1,0 +1,25 @@
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[] = "mango-apple-cherries";
+    char ch = '-';
+    int i, j, len;
+
+    len = strlen(str);
+
+    for (i = 0; i < len; i++) {
+        
+        if (str[i] != ch) {
+           
+            for (j = i; str[j] != ch && j < len; j++) {
+                printf("%c", str[j]);
+            }
+            printf("\n"); 
+            i = j; 
+        }
+    }
+
+    return 0;
+}
