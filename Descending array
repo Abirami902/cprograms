@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{ 
+    int arr[25],i,j,t,n;
+    
+    printf("Enter number of elements  :");
+    scanf("%d",&n);
+    
+    printf("Enter the elements [%d] :",n);
+    for(i=0;i<n;i++)
+    scanf("%d",&arr[i]);
+    
+    for(i=0;i<n;i++){
+    for(j=i+1;j<n;j++){
+    
+    if(arr[i]<arr[j])
+    {
+        t=arr[i];
+        arr[i]=arr[j];
+        arr[j]=t;
+    }
+}
+}
+
+printf("Array in Descending order :\n");
+
+for(i=0;i<n;i++){
+printf(" %d",arr[i]);
+}
+
+return 0;
+}
