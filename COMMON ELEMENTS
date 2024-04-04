@@ -1,0 +1,58 @@
+#include <stdio.h>
+int main()
+{
+    
+    int a[25],b[25],i,n1,n2,j,flag,x,k = 0;;
+    
+    printf("Enter number of elements  :");
+    scanf("%d",&n1);
+    
+    printf("Enter the elements [%d] :",n1);
+    
+    for(i=0;i<n1;i++){
+    scanf("%d",&a[i]);}
+    
+    	printf("The first array is :"); 
+	for (i = 0; i < n1; i++) { 
+		printf("%d ", a[i]); }
+		
+		printf("\nEnter number of elements  :");
+    scanf("%d",&n2);
+    
+    printf("Enter the elements [%d] :",n2);
+    
+    for(j=0;j<n2;j++){
+    scanf("%d",&b[j]);}
+    
+    	printf("The second array is :"); 
+	for (j = 0; j < n2; j++) { 
+		printf("%d ", b[j]); }
+		
+	int result[100];
+	
+	printf("\nCommon elements are: ");
+
+	for (i = 0; i < n1 ; i++) {
+		for (j = 0; j < n2; j++) {
+		
+		
+			if (a[i] == b[j]) {
+				flag = 0;
+			
+			
+				for (x = 0; x < k; x++) {
+					if (result[x] == a[i]) {
+						flag++;
+					}
+				}
+			
+				if (flag == 0) {
+					result[k] = a[i];
+					printf("%d ", result[k]);
+					k++;
+				}
+			}
+		}
+	}
+}
+
