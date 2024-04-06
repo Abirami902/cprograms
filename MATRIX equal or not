@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a[10][10], b[10][10];
+    int i, j, r1, c1, r2, c2, flag = 1;
+
+    printf("Enter the order of the matrix A \n");
+    scanf("%d %d", &r1, &c1);
+
+    printf("Enter the order of the matrix B \n");
+    scanf("%d %d", &r2, &c2);
+
+    if (r1 != r2 || c1 != c2) {
+        printf("Matrices have different dimensions, cannot be compared\n");
+        return 0;
+    }
+
+    printf("Enter the elements of matrix A \n");
+    for (i = 0; i < r1; i++) {
+        for (j = 0; j < c1; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    printf("Enter the elements of matrix B \n");
+    for (i = 0; i < r2; i++) {
+        for (j = 0; j < c2; j++) {
+            scanf("%d", &b[i][j]);
+        }
+    }
+
+    printf("MATRIX 1 \n");
+    for (i = 0; i < r1; i++) {
+        for (j = 0; j < c1; j++) {
+            printf("%3d", a[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("MATRIX 2 \n");
+    for (i = 0; i < r2; i++) {
+        for (j = 0; j < c2; j++) {
+            printf("%3d", b[i][j]);
+        }
+        printf("\n");
+    }
+
+    for (i = 0; i < r1; i++) {
+        for (j = 0; j < c2; j++) {
+            if (a[i][j] != b[i][j]) {
+                flag = 0;
+                break;
+            }
+        }
+        if (flag == 0)
+            break;
+    }
+
+    if (flag == 1)
+        printf("Two matrices are equal \n");
+    else
+        printf("But, two matrices are not equal \n");
+
+    return 0;
+}
