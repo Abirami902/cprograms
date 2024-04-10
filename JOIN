@@ -1,0 +1,28 @@
+
+use two;
+
+create table Employees(EmployeeID int primary key, FirstName varchar(20), LastName varchar(20), DepartmentID int, Salary int,Email varchar(50));
+
+create table Departments(Department_ID int, DepartmentName varchar(20)) ;
+
+insert into Employees values(1,'jose','k',null,70000,'jose11@gamail.com'),(2,'aami','abhi',2,80000,'aami343@gamail.com'),
+(3,'shij','kurip',null,20000,'shij898@gamail.com'),(4,'anju','k',4,75000,'anju909@gamail.com'),(5,'nar','p',5,40000,'nar77@gamail.com');
+
+select * from Employees;
+
+insert into Departments values(null,'FINANCE'),(2,'HR'),(null,'IT'),(4,'IT'),(5,'FINANCE');
+
+select * from Departments;
+
+select * from
+Employees inner join  Departments
+on Employees.DepartmentID = Departments.Department_ID; 
+
+select * from
+Employees left join  Departments
+on Employees.DepartmentID = Departments.Department_ID; 
+
+select * from
+Employees right join  Departments
+on Employees.DepartmentID = Departments.Department_ID; 
+
